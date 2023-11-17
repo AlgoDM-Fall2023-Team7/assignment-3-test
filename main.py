@@ -19,7 +19,7 @@ def style_to_vec(style):
     # Flatten and convert the style tensor to a NumPy array
     return style.numpy().ravel()
 
-image_paths = glob.glob('/Users/svs/Desktop/Projects/ADM/Assignment-3/images-by-style/*.jpg')
+image_paths = glob.glob('images-by-style/*.jpg')
 
 def load_image(image):
     image = plt.imread(image)
