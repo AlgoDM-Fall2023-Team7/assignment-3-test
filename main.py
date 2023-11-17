@@ -13,13 +13,13 @@ from scipy.spatial.distance import cdist
 st.markdown("<h1 style='color: blue; font-weight: bold;'>Image Search By an Artistic Style</h1>", unsafe_allow_html=True)
 
 # Load the TensorFlow model
-model = tf.keras.models.load_model("artistic_model.keras")
+model = tf.keras.models.load_model('artistic_model.keras')
 
 def style_to_vec(style):
     # Flatten and convert the style tensor to a NumPy array
     return style.numpy().ravel()
 
-image_paths = glob.glob("images-by-style/*.jpg")
+image_paths = glob.glob('images-by-style/*.jpg')
 
 def load_image(image):
     image = plt.imread(image)
